@@ -1,16 +1,36 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Base
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Grid Settings")]
+    [SerializeField] Cell cell;
+    [SerializeField] Transform gridParent;
+    [SerializeField] int rowIndex;
+    [SerializeField] int colIndex;
+
+
+    [Header("Controllers")]
+    public GridController gridController;
+
+
+    protected override void Awake()
     {
-        
+        Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Start()
     {
-        
+        base.Start();
+    }
+
+    protected override void Update()
+    {
+
+    }
+
+    private void Initialize()
+    {
+        gridController = new(cell,gridParent, rowIndex, colIndex);
     }
 }
+

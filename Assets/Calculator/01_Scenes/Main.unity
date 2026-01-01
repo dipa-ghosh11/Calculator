@@ -463,9 +463,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5066f0ef1770c67478b6889218874da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cell: {fileID: -2639690647299514501, guid: 35f2bc4c53e6b4a4b990e98b7fe9cdaf, type: 3}
+  gridParent: {fileID: 1549669742}
+  rowIndex: 6
+  colIndex: 4
 --- !u!224 &1415192656 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3240736690415694715, guid: 27b379089ad2a8c4388a37e8ba7f6cd4, type: 3}
+  m_PrefabInstance: {fileID: 1890161624941270049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1549669742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4493750374073311727, guid: 27b379089ad2a8c4388a37e8ba7f6cd4, type: 3}
   m_PrefabInstance: {fileID: 1890161624941270049}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1921216598
