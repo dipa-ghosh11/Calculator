@@ -5,5 +5,6 @@
         int Row { get; set; }
         int Column { get; set; }
         string Name { get; set; }
+        float GetDistance(float cellSpaceOffset);
     }
 }

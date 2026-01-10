@@ -1,16 +1,48 @@
+using Assets.Calculator._07_Scripts.Controllers;
+using Assets.Calculator._07_Scripts.Models;
 using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Panels GamePanels;
+    public Buttons GameButtons;
+
+    public ButtonController buttonController;
+    public PanelController panelController;
+    public Callback callback;
+
+    private void Awake()
     {
-        
+        Initialize();   
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+
+    }
+
+   
     void Update()
     {
-        
+
+    }
+
+    private void OnEnable()
+    {
+        panelController?.Subscribe();
+    }
+
+    private void OnDisable()
+    {
+        panelController.Unsubscribe();
+    }
+
+    private void Initialize() 
+    {
+        buttonController = new ButtonController(GameButtons, callback);
+        panelController = new PanelController(GamePanels, callback);
     }
 }
+
+
+

@@ -7,6 +7,7 @@ public class GameManager : Base
     [SerializeField] Transform gridParent;
     [SerializeField] int rowIndex;
     [SerializeField] int colIndex;
+    [SerializeField] float cellSpacing;
 
 
     [Header("Controllers")]
@@ -30,7 +31,7 @@ public class GameManager : Base
 
     private void Initialize()
     {
-        gridController = new(cell,gridParent, rowIndex, colIndex);
+        gridController = new(cell,gridParent, rowIndex, colIndex, cellSpacing);
     }
 }
 
